@@ -1,7 +1,7 @@
 #container {
     background-color: #e6ddde;
     width: 100%;
-    margin: 0;
+    height: 1500px;
 }
 
 h3 {
@@ -10,8 +10,19 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    color: #614b4c;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 20px;
+}
+
 .boards {
     display: flex;
+    justify-content: space-evenly;
     margin-top: 30px;
     margin-left: 30px;
     margin: auto;
@@ -20,13 +31,12 @@ h3 {
 
 td {
     border: 1px solid #94878c;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: white;
 }
 
 #computer-board, #user-board {
-    margin-right: 50px;
     border: 5px #654a4e solid;
     border-radius: 5%;
     padding: 5px;
@@ -48,6 +58,28 @@ img {
     height: auto;
     opacity: 0;
     cursor: pointer;
+}
+
+#start-btn {
+    background-color: white;
+    border-radius: 20%;
+    padding: 3px 5px 3px 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    color: grey;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#points {
+    display: flex;
+    align-items: center;
+}
+
+#score {
+    margin-left: 10px;
 }
 
 /* img:hover {

@@ -75,35 +75,51 @@ document.getElementById('start-btn').addEventListener('click', function() {
             imgArray[i].style.opacity = "0";
         }
     }
-    setTimeout(timer, 2000);
+    setTimeout(timer, 8000);
 });
 
 let imgClickedLeftBoard
 document.getElementById('computer-board').addEventListener('click', function(evt){
-    imgClickedLeftBoard = evt.target.className;
+    imgClickedLeftBoard = evt.target;
     evt.target.style.opacity = '1';
 })
 
 let imgClickedRightBoard
 document.getElementById('user-board').addEventListener('click', function(evt){
-    imgClickedRightBoard = evt.target.className;
+    imgClickedRightBoard = evt.target;
     evt.target.style.opacity = '1';
     score();
 })
 
+let numOfGuesses = 0;
+
 function score() {
+    numOfGuesses++;
     if (imgClickedLeftBoard !== undefined || imgClickedRightBoard !== undefined) {
-        if (imgClickedLeftBoard === imgClickedRightBoard) {
+        if (imgClickedLeftBoard.className === imgClickedRightBoard.className) {
             playerScore = playerScore + 5;
         } else {
-            playerScore = playerScore - 2;
+            if (numOfGuesses > 2) {
+                playerScore = playerScore - 2;
+            }
+            imgClickedLeftBoard.style.opacity = '0';
+            imgClickedRightBoard.style.opacity = '0';
+            gameOver();
         }
     }
     document.getElementById('score').textContent = playerScore;
 }
-score();
+
+let imgHtmlArray = document.getElementsByTagName('img');
+let convertedImgArray = Array.prototype.slice.call(imgHtmlArray);
 
 function gameOver() {
-
+    if (playerScore < 0) {
+        document.getElementById('gameover').textContent = 'You should train your memory!';
+    }
+    if (playerScore >= 0 && convertedImgArray.find(img => img.style.opacity === '1')) {
+        document.getElementById('gameover').textContent = 'Congrats! You have great memory!';
+    }
 }
+gameOver()
 

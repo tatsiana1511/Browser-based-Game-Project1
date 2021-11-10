@@ -10,46 +10,173 @@
 </head>
 <body>
     <div id="container">
-    <h3>Train your memory!</h3>
-    <h4>You have two attempts to warm up. Then, find a pair and get 5 points, miss and lose 2. Ready? Click Start! The boards will open up for 5 seconds, try to remember as many pairs as you can.</h4>
-    <button id="start-btn">Start</button>
-    <div>
+    <h3>Train your memory</h3>
+    <div id="gameover"></div>
+    <h4>You have two attempts to warm up. Then, find a pair and get 5 points, miss and lose 2.<br>Ready? Click Start! The boards will open up for 5 seconds, try to remember as many pairs as you can.</h4>
+    <button id="start-btn">START</button>
+    <div id = "points">
         <p>Your points:</p>
-        <span id="score"></span>
+        <span id="score">0</span>
     </div>
     <div class="boards">
         <table id="computer-board">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td> 
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td> 
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
             </tr>
         </table>
         <table id="user-board">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td> 
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td> 
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
+                <td class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        </div>
+                        <div class="flip-card-back">
+                        </div>
+                    </div>
+                </td>
             </tr>
         </table>
     </div>
