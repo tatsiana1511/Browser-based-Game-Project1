@@ -74,7 +74,7 @@ document.getElementById('start-btn').addEventListener('click', function() {
             flipCardInnerArray[i].classList.remove('clicked-flip-card-inner');
         }
     }
-    setTimeout(timer, 2000);
+    setTimeout(timer, 5000);
 });
 
 let imgClickedLeftBoard
@@ -110,23 +110,24 @@ function score() {
             setTimeout(function() {
                 flipCardInnerContainerLeft.classList.remove('clicked-flip-card-inner');
                 flipCardInnerContainerRight.classList.remove('clicked-flip-card-inner');
-            }, 2000);
-            gameOver();
+            }, 2000);   
         }
+        gameOver();
     }
     document.getElementById('score').textContent = playerScore;
 }
 
-let imgHtmlArray = document.getElementsByTagName('img');
-let convertedImgArray = Array.prototype.slice.call(imgHtmlArray);
-
 function gameOver() {
+    let flipCardArray = document.getElementsByClassName('clicked-flip-card-inner');
+    let convertedflipCardArray = Array.prototype.slice.call(flipCardArray);
+
     if (playerScore < 0) {
         document.getElementById('gameover').textContent = 'You should train your memory!';
     }
-    if (playerScore >= 0 && convertedImgArray.find(img => img.style.opacity === '1')) {
+    if (playerScore >= 0 && convertedflipCardArray.length === 18) {
         document.getElementById('gameover').textContent = 'Congrats! You have great memory!';
     }
+    console.log(convertedflipCardArray);
 }
 gameOver()
 

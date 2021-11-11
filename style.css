@@ -92,6 +92,9 @@ img {
 #points {
     display: flex;
     align-items: center;
+    color: #8c8c8c;
+    font-size: 25px;
+    justify-content: center;
 }
 
 #score {
