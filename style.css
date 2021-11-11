@@ -23,6 +23,7 @@ h3 {
     color: #ffffff;
     text-align: center;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -99,6 +100,14 @@ img {
 
 #score {
     margin-left: 10px;
+}
+
+#gameover {
+    display: flex;
+    font-family: 'Caladea', serif;
+    font-size: 30px;
+    justify-content: center;
+    color: #154c79;
 }
 
 .flip-card {
