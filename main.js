@@ -19,7 +19,6 @@ function reset() {
 }
 
 function prepareBoards() {
-
     let leftBoardImages = imagesArray.map(img => {
         let imageEl = document.createElement('img');
         imageEl.setAttribute('src', img);
@@ -63,13 +62,13 @@ function prepareBoards() {
     shuffleArray(leftBoardImages);
     shuffleArray(rightBoardImages);
     
-    leftBoard = document.querySelectorAll('#computer-board .flip-card-back');
+    leftBoard = document.querySelectorAll('#left-board .flip-card-back');
 
     for (let i = 0; i < leftBoard.length; i++) {
         leftBoard[i].append(leftBoardImages[i]);
     }
 
-    rightBoard = document.querySelectorAll('#user-board .flip-card-back');
+    rightBoard = document.querySelectorAll('#right-board .flip-card-back');
 
     for (let i = 0; i < rightBoard.length; i++) {
         rightBoard[i].append(rightBoardImages[i]);
@@ -98,7 +97,7 @@ document.getElementById('start-btn').addEventListener('click', function() {
 
 let imgClickedLeftBoard
 let flipCardInnerContainerLeft
-document.getElementById('computer-board').addEventListener('click', function(evt){
+document.getElementById('left-board').addEventListener('click', function(evt){
     flipCardInnerContainerLeft = evt.target.parentElement;
     let flipCardBack = flipCardInnerContainerLeft.children[1];
     imgClickedLeftBoard = flipCardBack.children[0];
@@ -107,7 +106,7 @@ document.getElementById('computer-board').addEventListener('click', function(evt
 
 let imgClickedRightBoard
 let flipCardInnerContainerRight
-document.getElementById('user-board').addEventListener('click', function(evt){
+document.getElementById('right-board').addEventListener('click', function(evt){
     flipCardInnerContainerRight = evt.target.parentElement;
     let flipCardBack = flipCardInnerContainerRight.children[1];
     imgClickedRightBoard = flipCardBack.children[0];
